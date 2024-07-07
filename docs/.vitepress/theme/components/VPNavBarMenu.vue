@@ -2,7 +2,7 @@
 import { useData } from 'vitepress'
 import VPNavBarMenuLink from 'vitepress/dist/client/theme-default/components/VPNavBarMenuLink.vue'
 import VPNavBarMenuGroup from 'vitepress/dist/client/theme-default/components/VPNavBarMenuGroup.vue'
-import SpecNav from './SpecNav.vue'
+import SpecNav from './SpecsNav.vue'
 const { theme } = useData()
 
 </script>

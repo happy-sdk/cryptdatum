@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import { tabsMarkdownPlugin } from 'vitepress-plugin-tabs'
+import markdownItAnchor from 'markdown-it-anchor'
 import { fileURLToPath } from 'url'
 
 export const shared = defineConfig({
@@ -33,6 +34,13 @@ export const shared = defineConfig({
 
   markdown: {
     math: true,
+    toc: {
+      level: [1, 3],
+      linkTag: 'router-link',
+    },
+    // anchor: {
+    //   permalink: markdownItAnchor.permalink.headerLink()
+    // },
     config(md) {
       md.use(tabsMarkdownPlugin)
     }

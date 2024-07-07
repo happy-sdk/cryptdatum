@@ -9,7 +9,7 @@ export const en = defineConfig({
       title: 'Specs',
       latest: '/specs/v1.0',
       items: [
-        { text: 'v1.0 (latest)', link: '/specs/v1.0', activeMatch: '/specs/v1.0'},
+        { text: 'v1.0 (latest)', link: '/specs/v1.0/introduction' },
         { text: 'v1.1 (draft)',  link: '/specs/v1.1', activeMatch: '/specs/v1.1' },
       ]
     },
@@ -22,11 +22,36 @@ export const en = defineConfig({
         base: '/specs/v1.0/',
         items:   [
           {
-            text: 'v1.0 Specification',
-            children: [
-              { text: 'Overview', link: '/specs/v1.0/' },
+            text: 'Specification v1.0',
+            items: [
+              { text: 'Introduction', link: 'introduction' },
+              { text: 'Design', link: 'design' },
+              { text: 'Byte Ordering', link: 'byte-ordering' },
+              { text: 'Constants', link: 'constants' },
+              { text: 'Feature Flags', link: 'feature-flags' },
+              { text: 'Header', link: 'header' },
+              { text: 'Metadata', link: 'metadata' },
+              { text: 'Payload', link: 'payload' },
+              { text: 'Checksum', link: 'checksum' },
+              { text: 'Data Signing', link: 'data-signing' },
+              { text: 'Compression', link: 'compression' },
+              { text: 'Encryption', link: 'encryption' },
+              { text: 'File extension', link: 'file-extension' },
+              { text: 'Specification Versioning', link: 'specification-versioning' },
+              { text: 'Error Handling', link: 'error-handling' },
+              { text: 'Implementations', link: 'implementations' },
+              { text: 'API', link: 'api' },
+              { text: 'Cryptdatum Evolution', link: 'cryptdatum-evolution' },
             ],
           },
+          {
+            text: 'Implementation',
+            items: [
+              { text: 'API', link: 'api' },
+              { text: 'Error Handling', link: 'error-handling' },
+              { text: 'Libraries', link: 'libraries' },
+            ],
+          }
         ],
       },
       '/develop/' : {
@@ -51,7 +76,7 @@ function nav() {
   return [
     { text: 'Guide', link: '/guide/what-is-cryptdatum', activeMatch: '/guide/' },
     { text: 'Download', link: '/downloads', activeMatch: '/downloads/' },
-    { text: 'Develop', link: '/develop/', activeMatch: '/develop/' },
+    { text: 'Develop', link: '/develop/developing-with-cryptdatum', activeMatch: '/develop/' },
   ]
 }
 
@@ -76,7 +101,7 @@ function sidebarGuide() {
     {
       text: 'Developer Guide',
       collapsed: false,
-      link: '../develop/',
+      link: '../develop/developing-with-cryptdatum',
       activeMatch: '/develop/',
     }
   ]
@@ -87,16 +112,14 @@ function sidebarDevelop() {
     {
       text: 'Developer Guide',
       items: [
-        { text: 'Developing with Cryptdatum', link: '/' },
+        { text: 'Developing with Cryptdatum', link: 'developing-with-cryptdatum' },
       ]
     },
     {
       text: 'Libraries',
-      link: '/develop',
-      activeMatch: '/develop',
       items: [
         { text: 'Get library', link: 'libraries' },
-        { text: 'Develop library', link: '/develop-library.md' },
+        { text: 'Develop library', link: 'develop-library' },
       ],
     },
   ]

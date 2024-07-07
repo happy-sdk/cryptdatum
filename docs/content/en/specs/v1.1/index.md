@@ -1,5 +1,5 @@
-# Cryptdatum Specification v1.1
+# Cryptdatum Specification <Badge type="tip" text="v1.1" />
 
-no proposals
+<Badge type="warning" text="Public Working Draft" />
 
 

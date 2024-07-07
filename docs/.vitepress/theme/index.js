@@ -6,7 +6,7 @@ import './style.css'
 
 import { enhanceAppWithTabs } from 'vitepress-plugin-tabs/client'
 
-import SpecsNav from '../../components/SpecsNav.vue'
+import SpecsNav from './components/SpecsNav.vue'
 import VPNavBarMenu from './components/VPNavBarMenu.vue'
 
 export default {
