@@ -7,7 +7,7 @@ export const en = defineConfig({
     nav: nav(),
     specs: {
       title: 'Specs',
-      latest: '/specs/v1.0',
+      latest: '/specs/v1.0/introduction',
       items: [
         { text: 'v1.0 (latest)', link: '/specs/v1.0/introduction' },
         { text: 'v1.1 (draft)',  link: '/specs/v1.1', activeMatch: '/specs/v1.1' },
@@ -44,14 +44,6 @@ export const en = defineConfig({
               { text: 'Cryptdatum Evolution', link: 'cryptdatum-evolution' },
             ],
           },
-          {
-            text: 'Implementation',
-            items: [
-              { text: 'API', link: 'api' },
-              { text: 'Error Handling', link: 'error-handling' },
-              { text: 'Libraries', link: 'libraries' },
-            ],
-          }
         ],
       },
       '/develop/' : {
@@ -118,7 +110,7 @@ function sidebarDevelop() {
     {
       text: 'Libraries',
       items: [
-        { text: 'Get library', link: 'libraries' },
+        { text: 'Libraries', link: 'libraries' },
         { text: 'Develop library', link: 'develop-library' },
       ],
     },

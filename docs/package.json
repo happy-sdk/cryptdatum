@@ -3,7 +3,7 @@
   "name": "docs",
   "type": "module",
   "scripts": {
-    "dev": "vitepress dev",
+    "start": "vitepress dev",
     "build": "vitepress build",
     "preview": "vitepress preview",
     "lunaria:build": "lunaria build",

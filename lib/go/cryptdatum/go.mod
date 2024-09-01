@@ -1,3 +1,3 @@
-module github.com/happy-sdk/cryptdatum/lib/go/cryptdatum
+module cryptdatum.dev/lib/go/cryptdatum
 
-go 1.22.3
+go 1.22.6

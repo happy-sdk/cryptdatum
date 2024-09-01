@@ -1,6 +1,6 @@
 # Design
 
-The Cryptdatum (CDT) format consists of a 64-byte header followed by the payload. The header contains information about the data and used Cryptdatum features, including a magic number, version number, timestamp, operation counter, checksum, flags, total size of datum, compression algorithm (if used), encryption algorithm (if data is encrypted), signature size field (if data is signed), and metadata type (if metadata is present).
+The Cryptdatum format consists of a 64-byte header followed by the payload. The header contains information about the data and used Cryptdatum features, including a magic number, version number, timestamp, operation counter, checksum, flags, total size of datum, compression algorithm (if used), encryption algorithm (if data is encrypted), signature size field (if data is signed), and metadata type (if metadata is present).
 
 ## Structure of a Valid Cryptdatum
 

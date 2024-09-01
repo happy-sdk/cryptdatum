@@ -68,8 +68,7 @@ The Cryptdatum header is a `64-byte` block of data that contains important infor
 
 ### SIZE
 
-**SIZE** field is an 8-byte value that **SHALL** contain the total size of the cryptdatum data payload in bytes. This helps to ensure that the entire data payload has been received. It allows the decoder to know the amount of data to read in order to fully decode the Cryptdatum, for example when the datum is not chunked. Also in case of extractable data it makes it easier to allocate or ensure availability of sufficient storage space. 
-When payload is in use and this field is set to value greater than 0 then *DATUM EMPTY (4)* flag bits **MUST NOT** be set.
+**SIZE** field is an 8-byte value that **SHALL** contain the total size of the cryptdatum data payload in bytes. This helps to ensure that the entire data payload has been received. It allows the decoder to know the amount of data to read in order to fully decode the Cryptdatum, for example when the datum is not chunked. Also in case of extractable data it makes it easier to allocate or ensure availability of sufficient storage space. When payload is in use and this field is set to value greater than 0 then *DATUM EMPTY (4)* flag bits **MUST NOT** be set. When *DATUM EMPTY (4)* flag is set then valu **MUST** be `0`
 
 ::: info *validation*
 
