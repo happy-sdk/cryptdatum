@@ -24,7 +24,7 @@ export const en = defineConfig({
           {
             text: 'Specification v1.0',
             items: [
-              { text: 'Introduction', link: 'introduction' },
+              { text: 'Introduction', link: '1-introduction' },
               { text: 'Design', link: 'design' },
               { text: 'Byte Ordering', link: 'byte-ordering' },
               { text: 'Constants', link: 'constants' },
