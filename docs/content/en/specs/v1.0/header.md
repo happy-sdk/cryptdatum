@@ -159,12 +159,11 @@ When implementing chunked checksums, the chunk size should be chosen based on th
 
 **METADATA SIZE** field is a 4-byte value that indicates the size of the metadata present after the header. This field is required when the *DATUM METADATA (1024)* flag bit is set in the header to indicate that metadata is being used. The format of a valid Cryptdatum when metadata is used is as follows:
 
-```bnf
-<cryptdatum> ::= <cryptdatum_header> <metadata>
-    | <cryptdatum_header> <metadata> <payload>
-    | <cryptdatum_header> <metadata> <signature> <payload>
-    | <cryptdatum_header> <metadata> <signature> <checksum_table> <payload>
-    | <cryptdatum_header> <metadata> <checksum_table> <payload>
+```ebnf
+cryptdatum ::= cryptdatum_header metadata
+             | cryptdatum_header metadata payload
+             | cryptdatum_header metadata signature [ checksum_table ] payload
+             | cryptdatum_header metadata checksum_table payload
 ```
 
 It's important to note that the **METADATA SIZE** field is used to define the size of the metadata, for more information about metadata, see the [Metadata](metadata) section.
@@ -246,12 +245,12 @@ The checksum mechanism in Cryptdatum ensures data integrity while optimizing mem
 
 **SIGNATURE SIZE** field is a 2-byte value that contains the total size of the signature after the header for faster lookup of the signature data and the start location of the payload. The value of this field depends on the signature type field and therefore may not be set for some signing methods when the signature is not stored together with the data or is part of the encrypted payload. When used, the format would be in the following order:
 
-```bnf
-<cryptdatum> ::= <cryptdatum_header> <payload>
-    | <cryptdatum_header> <signature> <payload>
-    | <cryptdatum_header> <signature> <checksum_table> <payload>
-    | <cryptdatum_header> <metadata> <signature> <payload>
-    | <cryptdatum_header> <metadata> <signature> <checksum_table> <payload>
+```ebnf
+cryptdatum ::= cryptdatum_header payload
+             | cryptdatum_header signature payload
+             | cryptdatum_header signature checksum_table payload
+             | cryptdatum_header metadata signature payload
+             | cryptdatum_header metadata signature checksum_table payload
 ```
 
 Signing implementations should implement the most appropriate and secure use of these fields based on the given signing method.
@@ -275,23 +274,23 @@ Signing implementations should implement the most appropriate and secure use of 
 
 **METADATA SPEC** field is a 2-byte value that serves as an identifier for the metadata schema specification. This field is required when metadata is used, and must be set accordingly. Along with this field, the *DATUM METADATA (1024)* flag bit **MUST** also be set to indicate that metadata is being used. The **METADATA SIZE** field **MUST** indicate the size of the metadata. When used, the format of the metadata in a Cryptdatum datum is as follows: Here is an example of the general format of a valid Cryptdatum when metadata is used:
 
-```bnf
-<valid cryptdatum> ::= <cryptdatum header> <metadata>
-  | <cryptdatum header> <metadata> <signature> <payload>
-  | <cryptdatum header> <metadata> <payload>
+```ebnf
+valid_cryptdatum ::= cryptdatum_header metadata
+                   | cryptdatum_header metadata signature payload
+                   | cryptdatum_header metadata payload
 ```
 
-```bnf
-<cryptdatum> ::= <cryptdatum_header> <metadata>
-    | <cryptdatum_header> <metadata> <payload>
-    | <cryptdatum_header> <metadata> <signature> <payload>
-    | <cryptdatum_header> <metadata> <signature> <checksum_table> <payload>
-    | <cryptdatum_header> <metadata> <checksum_table> <payload>
+```ebnf
+cryptdatum ::= cryptdatum_header metadata
+             | cryptdatum_header metadata payload
+             | cryptdatum_header metadata signature payload
+             | cryptdatum_header metadata signature checksum_table payload
+             | cryptdatum_header metadata checksum_table payload
 ```
 
 Note that the metadata field can be combined with signature and payload, or be used alone depending on the desired use case and security requirements. For more information on the format and usage of metadata in a Cryptdatum, refer to the [Metadata](metadata) section.
 
-::: info *validation*
+::: info *validation* 
 
 **When used** 
 

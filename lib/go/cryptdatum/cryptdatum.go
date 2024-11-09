@@ -193,7 +193,7 @@ func Open(name string) (*Container, error) {
 		return nil, errors.Join(Error, err)
 	}
 
-	cdatum := &Container{
+	datx := &Container{
 		path: name,
 		rwc:  file,
 	}
@@ -201,7 +201,7 @@ func Open(name string) (*Container, error) {
 	// Read the first 64 bytes
 	headerbuf := make([]byte, HeaderSize)
 	if _, err := file.ReadAt(headerbuf, 0); err != nil {
-		if cerr := cdatum.Close(); cerr != nil {
+		if cerr := datx.Close(); cerr != nil {
 			return nil, errors.Join(err, cerr)
 		}
 		return nil, errors.Join(Error, err)
@@ -209,14 +209,14 @@ func Open(name string) (*Container, error) {
 
 	header, err := ParseHeader(headerbuf)
 	if err != nil {
-		if cerr := cdatum.Close(); cerr != nil {
+		if cerr := datx.Close(); cerr != nil {
 			return nil, errors.Join(cerr, err)
 		}
 		return nil, errors.Join(Error, err)
 	}
-	cdatum.header = header
+	datx.header = header
 
-	return cdatum, nil
+	return datx, nil
 }
 
 // Close closes the File, rendering it unusable for I/O.

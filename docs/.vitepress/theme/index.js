@@ -3,7 +3,6 @@ import { h } from 'vue'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
 
-
 import { enhanceAppWithTabs } from 'vitepress-plugin-tabs/client'
 
 import SpecsNav from './components/SpecsNav.vue'
