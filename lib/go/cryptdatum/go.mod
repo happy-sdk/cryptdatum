@@ -1,3 +1,3 @@
-module cryptdatum.dev/lib/go/cryptdatum
+module cryptdatum.dev/lib/cryptdatum
 
-go 1.22.6
+go 1.24.0

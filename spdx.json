@@ -1,0 +1,49 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.happy-sdk/cryptdatum",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/391ad280-791f-4c95-a664-80f6fa5f5919",
+  "creationInfo": {
+    "licenseListVersion": "3.20",
+    "creators": [
+      "Tool: protobom-v1.0.0-alpha.4.0.20250306211134-e7f9b4e4292b+dirty",
+      "Tool: mkungla-sbom-tool-1.0",
+      "Organization: Happy SDK (os@digafin.com)"
+    ],
+    "created": "2025-05-24T17:01:07Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.happy-sdk/cryptdatum",
+      "SPDXID": "SPDXRef-pkg:happy-sdk/cryptdatum@0.0.1",
+      "versionInfo": "0.0.1",
+      "supplier": "Organization: Happy SDK (os@digafin.com)",
+      "downloadLocation": "git@github.com:happy-sdk/cryptdatum.git",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "licenseDeclared": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "OTHER",
+          "referenceLocator": "https://github.com/happy-sdk/cryptdatum/issues"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "OTHER",
+          "referenceLocator": "https://github.com/happy-sdk/cryptdatum",
+          "comment": "ProjectName: Unknown"
+        }
+      ],
+      "primaryPackagePurpose": "APPLICATION"
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-pkg:happy-sdk/cryptdatum@0.0.1",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

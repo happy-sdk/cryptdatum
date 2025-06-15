@@ -1,0 +1,3 @@
+[submodule "devel/deps/github.com/happy-sdk/happy"]
+	path = devel/deps/github.com/happy-sdk/happy
+	url = git@github.com:happy-sdk/happy.git

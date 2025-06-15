@@ -1,0 +1,19 @@
+go 1.24.0
+
+use (
+	./cmd/cryptdatum
+	./devel/deps/github.com/happy-sdk/happy
+	./devel/deps/github.com/happy-sdk/happy/pkg/branding
+	./devel/deps/github.com/happy-sdk/happy/pkg/cli/ansicolor
+	./devel/deps/github.com/happy-sdk/happy/pkg/devel/testutils
+	./devel/deps/github.com/happy-sdk/happy/pkg/options
+	./devel/deps/github.com/happy-sdk/happy/pkg/scheduling/cron
+	./devel/deps/github.com/happy-sdk/happy/pkg/settings
+	./devel/deps/github.com/happy-sdk/happy/pkg/strings/bexp
+	./devel/deps/github.com/happy-sdk/happy/pkg/strings/humanize
+	./devel/deps/github.com/happy-sdk/happy/pkg/strings/slug
+	./devel/deps/github.com/happy-sdk/happy/pkg/strings/textfmt
+	./devel/deps/github.com/happy-sdk/happy/pkg/vars
+	./devel/deps/github.com/happy-sdk/happy/pkg/version
+	./lib/go/cryptdatum
+)
