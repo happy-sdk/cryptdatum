@@ -31,7 +31,7 @@ export const shared = defineConfig({
       {
         rel: 'icon',
         type: 'image/svg+xml',
-        href: '/assets/cryptdatum-logo.svg',
+        href: '/cryptdatum/assets/cryptdatum-logo.svg',
       },
     ],
     [
@@ -39,7 +39,7 @@ export const shared = defineConfig({
       {
         rel: 'icon',
         type: 'image/png',
-        href: '/assets/cryptdatum-logo-mini.png',
+        href: '/cryptdatum/assets/cryptdatum-logo-mini.png',
       },
     ],
     ['meta', { name: 'theme-color', content: '#5f67ee' }],
@@ -57,17 +57,24 @@ export const shared = defineConfig({
       'meta',
       {
         property: 'og:image',
-        content: 'https://cryptdatum.dev/assets/cryptdatum-og.jpg',
+        content:
+          'https://happy-sdk.github.io/cryptdatum/assets/cryptdatum-og.jpg',
       },
     ],
-    ['meta', { property: 'og:url', content: 'https://cryptdatum.dev/' }],
+    [
+      'meta',
+      {
+        property: 'og:url',
+        content: 'https://happy-sdk.github.io/cryptdatum/',
+      },
+    ],
   ],
 
   themeConfig: {
     logo: { src: '/assets/cryptdatum-logo-yellow.svg', width: 24, height: 24 },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/digafin/cryptdatum' },
+      { icon: 'github', link: 'https://github.com/happy-sdk/cryptdatum' },
     ],
 
     search: {
@@ -78,7 +85,7 @@ export const shared = defineConfig({
 
     editLink: {
       pattern:
-        'https://github.com/digafin/cryptdatum/edit/main/docs/content/:path',
+        'https://github.com/happy-sdk/cryptdatum/edit/main/docs/content/:path',
     },
 
     specs: {
