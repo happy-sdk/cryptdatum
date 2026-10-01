@@ -3,8 +3,8 @@ layout: page
 ---
 
 <script setup>
-import { useData, useRouter } from 'vitepress'
+import { useData, useRouter, withBase } from 'vitepress'
 const { theme } = useData()
 const router = useRouter()
-router.go(`/specs/${theme.value.specs.latest}/`)
+router.go(withBase(`/specs/${theme.value.specs.latest}/`))
 </script>

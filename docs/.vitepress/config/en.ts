@@ -58,7 +58,7 @@ function nav() {
     { text: 'Docs', link: '/docs/', activeMatch: '/docs/' },
     { text: 'Download', link: '/downloads', activeMatch: '/downloads/' },
     { text: 'Libraries', link: '/libraries', activeMatch: '/libraries/' },
-    { text: 'Specs', link: '/specs/latest/', activeMatch: '/specs/' },
+    { text: 'Specs', link: '/specs/latest', activeMatch: '/specs/' },
   ]
 }
 

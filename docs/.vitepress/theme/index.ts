@@ -6,7 +6,6 @@ import DefaultTheme from 'vitepress/theme'
 import { enhanceAppWithTabs } from 'vitepress-plugin-tabs/client'
 
 import SpecsNav from './components/SpecsNav.vue'
-import VPNavBarMenu from './components/VPNavBarMenu.vue'
 
 import './style.css'
 
@@ -25,6 +24,5 @@ export default {
   },
   enhanceApp({ app /* router, siteData */ }) {
     enhanceAppWithTabs(app)
-    app.component('VPNavBarMenu', VPNavBarMenu)
   },
 } satisfies Theme

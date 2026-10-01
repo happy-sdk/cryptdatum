@@ -145,7 +145,7 @@ Writes a fragment to a stream.
 
 ## Error Handling
 
-All functions must follow the error handling guidelines specified in the [Error Handling](../error-handling.md) section. This includes:
+All functions must follow the error handling guidelines specified in the [Error Handling](./error-handling.md) section. This includes:
 
 - Using appropriate error types
 - Providing clear error messages

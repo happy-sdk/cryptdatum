@@ -1,6 +1,6 @@
 import { defineConfig } from 'vitepress'
-import { shared } from './shared'
-import { en } from './en'
+import { shared } from './shared.ts'
+import { en } from './en.ts'
 export default defineConfig({
   ...shared,
 

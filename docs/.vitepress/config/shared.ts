@@ -1,10 +1,10 @@
 import { defineConfig } from 'vitepress'
 import { tabsMarkdownPlugin } from 'vitepress-plugin-tabs'
-import { fileURLToPath } from 'url'
 
 export const shared = defineConfig({
   title: 'Cryptdatum',
   srcDir: 'content',
+  base: '/cryptdatum/',
 
   rewrites: {
     'en/:rest*': ':rest*',
@@ -22,19 +22,6 @@ export const shared = defineConfig({
     // },
     config(md) {
       md.use(tabsMarkdownPlugin)
-    },
-  },
-
-  vite: {
-    resolve: {
-      alias: [
-        {
-          find: /^.*\/VPNavBarMenu\.vue$/,
-          replacement: fileURLToPath(
-            new URL('../theme/components/VPNavBarMenu.vue', import.meta.url),
-          ),
-        },
-      ],
     },
   },
 
